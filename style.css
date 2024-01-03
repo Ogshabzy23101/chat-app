@@ -26,9 +26,9 @@
 main {
  display: flex;
  flex-direction: column;
- height: 100vh;
+ min-height: 100vh;
  max-width: 100vw;
- overflow: hidden;
+ font-family: var(--mainFont);
 }
 
 .top-bg {
@@ -58,7 +58,7 @@ main {
 .container {
  display: flex;
  flex-direction: column;
- background-color: hsl(208, 100%, 97%);
+ /* background-color: hsl(208, 100%, 97%); */
  min-height: 80vh;
  width: 80vw;
  margin: auto;
@@ -75,7 +75,6 @@ main {
 }
 
 .inner-mobile {
- border: 2px black solid;
  border-radius: 30px;
  height: 100%;
 }
@@ -85,7 +84,6 @@ main {
  position: relative;
  width: 100%;
  height: 5rem;
- /* top: -20px; */
  background: rgb(233, 66, 255);
  background: linear-gradient(309deg, rgba(233, 66, 255, 1) 19%, rgba(136, 56, 255, 1) 86%);
  border-top-right-radius: 30px;
@@ -119,17 +117,21 @@ main {
 .mobiletop-article {
  display: flex;
  flex-direction: row;
-}
-
-.mobiletop-text {
- text-align: center;
- margin: auto;
+ width: 100%;
  margin-left: 10px;
 }
 
+.mobiletop-text {
+ text-align: start;
+ margin: auto;
+ margin-left: 10px;
+ width: 60%;
+}
+
 .mobiletop-text h1 {
- font-size: 1rem;
- color: var(--lightgrayistViolet)
+ font-size: 0.85rem;
+ color: white;
+ letter-spacing: 2px;
 }
 
 .mobiletop-text p {
@@ -148,41 +150,138 @@ main {
 .chat-sec {
  padding: 1rem;
  background-color: hsl(270, 20%, 96%);
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 2rem;
+ border-bottom-left-radius: 30px;
+ border-bottom-right-radius: 30px;
 }
 
 .first-chat {
  display: grid;
  grid-template-columns: 1fr;
  gap: 1rem;
- width: 70%;
+ width: 80%;
 }
 
-.first-chat p {
+.first-chat>p {
  color: var(--leftChat);
  background-color: hsla(289, 46%, 84%, 0.272);
+ padding: 1rem;
+ font-size: 0.85rem;
+ border-top-right-radius: 15px;
+ border-top-left-radius: 10px;
+ border-bottom-right-radius: 15px;
+ border-bottom-left-radius: 5px;
+ width: fit-content;
+ margin-right: auto;
+}
+
+.second-chat {
+ display: flex;
+ flex-direction: column;
+ width: 80%;
+ margin-left: auto;
+ gap: 1rem;
+}
+
+.second-chat>p {
+ color: var(--rightChatChat);
+ background-color: white;
  padding: 1rem;
  border-top-right-radius: 15px;
  border-top-left-radius: 10px;
  border-bottom-right-radius: 15px;
  border-bottom-left-radius: 5px;
+ width: fit-content;
+ margin-left: auto;
+ font-size: 0.85rem;
+}
+
+.sndchat-img {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ width: 100%;
+ margin: 0 auto;
+}
+
+.sndchat-img img {
+ width: 60px;
+ border-radius: 15px;
+}
+
+.price {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ padding: 1rem;
+ width: 90%;
+ place-items: center;
+ border-top-right-radius: 15px;
+ border-top-left-radius: 10px;
+ border-bottom-right-radius: 15px;
+ border-bottom-left-radius: 5px;
+ background: rgb(233, 66, 255);
+ background: linear-gradient(101deg, rgba(233, 66, 255, 1) 0%, rgba(166, 59, 255, 1) 100%, rgba(136, 56, 255, 1) 100%);
+}
+
+.price-text {
+ display: flex;
+ flex-direction: row;
+ color: white;
+}
+
+.price-text>p {
+ margin-left: 10px;
+ font-size: 0.85rem;
+}
+
+.price>h1 {
+ font-size: 1rem;
+ color: white;
 }
 
 
+.submit-field {
+ position: relative;
+}
 
+input {
+ width: 100%;
+ padding: 15px;
+ border: none;
+ border-radius: 20px;
+}
 
+button {
+ position: absolute;
+ right: 10px;
+ top: 7px;
+ border: none;
+ background: none;
+}
+button i{
+ font-size: 2rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-article {
+.bookings {
  text-align: center;
+ width: 100%;
+ margin: 2rem auto;
+ border: 2px red solid;
+}
+.bookings > h1{
+ color: var(--mainHeading);
+ font-size: 2rem;
+ margin-bottom: 1rem;
+ width: 100%;
+}
+.bookings > p{
+ color: var(--paragragh);
+ font-size: 1rem;
+ padding: 0.8rem;
+ line-height: 1.5;
  width: 80%;
- margin: 0 auto;
+ margin: auto;
 }
